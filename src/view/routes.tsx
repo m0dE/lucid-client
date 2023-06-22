@@ -118,7 +118,7 @@ const privateRoutes = [
 const publicRoutes = [
   {
     path: '/ ',
-    loader: () => import('src/view/dashboard/DashboardPage'),
+    loader: () => import('src/view/auth/SigninPage'),
   },
   {
     path: '/auth/signin',

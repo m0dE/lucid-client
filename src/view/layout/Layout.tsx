@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from 'src/view/layout/Header';
 import Menu from 'src/view/layout/Menu';
 import { useRouteMatch } from 'react-router-dom';
 import layoutSelectors from 'src/modules/layout/layoutSelectors';
@@ -16,9 +15,9 @@ function Layout(props) {
       <div
         className={`${
           menuVisible ? 'hidden' : 'flex'
-        } sm:flex md:flex lg:flex  dark:bg-gray-900 flex-col flex-auto min-h-screen overflow-x-hidden`}>
-        <Header />
-        <div className='p-6'>{props.children}</div>
+        } sm:flex md:flex lg:flex  dark:bg-gray-700 flex-col flex-auto min-h-screen overflow-x-hidden`}
+      >
+        <div className='p-1'>{props.children}</div>
       </div>
     </div>
   );

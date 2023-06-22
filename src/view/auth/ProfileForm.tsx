@@ -1,9 +1,9 @@
-import { faSave } from '@fortawesome/free-regular-svg-icons';
+// import { faSave } from '@fortawesome/free-regular-svg-icons';
 import {
-  faArrowLeft,
+  // faArrowLeft,
   faCheckCircle,
   faTimes,
-  faUndo,
+  // faUndo,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -14,7 +14,7 @@ import { i18n } from 'src/i18n';
 import actions from 'src/modules/auth/authActions';
 import selectors from 'src/modules/auth/authSelectors';
 import yupFormSchemas from 'src/modules/shared/yup/yupFormSchemas';
-import { getHistory } from 'src/modules/store';
+// import { getHistory } from 'src/modules/store';
 import Storage from 'src/security/storage';
 import ImagesFormItem from 'src/view/shared/form/items/ImagesFormItem';
 import InputFormItem from 'src/view/shared/form/items/InputFormItem';
@@ -76,7 +76,8 @@ function ProfileFormPage(props) {
       <div className='flex justify-center items-center'>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className='border border-gray-300 rounded-lg p-4 ml-4 w-auto item-center'>
+          className='border border-gray-300 rounded-lg p-4 ml-4 w-auto item-center'
+        >
           <h1 className='text-lg font-medium mb-6'>
             {i18n('auth.profile.title')}
           </h1>
@@ -132,7 +133,8 @@ function ProfileFormPage(props) {
                 disabled={saveLoading}
                 onClick={() => props.onCancel()}
                 className='inline-block px-8 py-2 my-2 mr-6 text-sm text-white border border-white rounded-md hover:bg-gray-300 focus:outline-none dark:hover:text-black'
-                type='button'>
+                type='button'
+              >
                 {i18n('common.cancel')}
                 <FontAwesomeIcon className='ml-2' icon={faTimes} />
               </button>
@@ -142,7 +144,8 @@ function ProfileFormPage(props) {
               className='inline-block border-green-500 border-2 rounded-md px-4 py-2 my-2 mr-4 text-sm text-green-500 hover:text-white hover:bg-green-500 focus:outline-none focus:border-green-500'
               disabled={saveLoading}
               type='button'
-              onClick={form.handleSubmit(onSubmit)}>
+              onClick={form.handleSubmit(onSubmit)}
+            >
               {i18n('common.save')}
               <FontAwesomeIcon className='ml-2' icon={faCheckCircle} />
             </button>

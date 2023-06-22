@@ -14,11 +14,11 @@ function PublicRoute({
       render={(props) => {
         const permissionChecker = new PermissionChecker(
           currentTenant,
-          currentUser,
+          currentUser
         );
 
         if (permissionChecker.isAuthenticated) {
-          return <Redirect to="/" />;
+          return <Redirect to='/' />;
         }
 
         return <Component {...props} />;

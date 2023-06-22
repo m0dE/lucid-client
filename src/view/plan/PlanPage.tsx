@@ -7,16 +7,16 @@ import PlanCardPaid from 'src/view/plan/PlanCardPaid';
 import authSelectors from 'src/modules/auth/authSelectors';
 import { useSelector } from 'react-redux';
 import moment from 'moment';
-import MenuComponent from '../auth/MenuComponent';
+import SideBar from '../common/SideBar';
 
 function PlanPage(props) {
   const tenantDetail = useSelector(authSelectors.selectCurrentTenant);
   return (
     <>
       <div className='flex'>
-        <MenuComponent />
+        <SideBar />
 
-        <div className='bg-white border border-gray-200 rounded-md dark:bg-gray-900 dark:border-gray-900 w-full dark:text-white'>
+        <div className='bg-white border border-gray-200 rounded-md dark:bg-gray-700 w-full dark:text-white'>
           {/* <Breadcrumb
             items={[[i18n('dashboard.menu'), '/'], [i18n('billing.menu')]]}
           /> */}
